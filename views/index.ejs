@@ -10,14 +10,23 @@
 <body>
     <h1>Welcome to gitPub</h1>
 
-    
+
+    <!-- Loop for names and capital letters -->
+    <% for (let i = 0; i < drinks.length; i++){ %>
+        <% drinks[i].name = drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %>
+        <li id="drinkNames"> <%= drinks[i].name %> </li>
+    <% } %>
 
 
     <style>
         body {
-            background-color: darkgray;
-            color: lightblue;
+            background-color: rgb(92, 92, 92);
+            color: black;
             text-align: center;
+        }
+
+        #drinkNames {
+            color: orange;
         }
     </style>
     
