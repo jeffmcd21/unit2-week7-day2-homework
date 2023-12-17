@@ -15,20 +15,24 @@ const drinks = require("./models/drinks.js")
 // Create app object
 const port = express()
 
-// Set GET Route
+// GET Route
 port.get("/", (req, res) => {
     res.send("Welcome to the Gitpub App!")
 })
 
 
-// Set Variable for Drinks
+// Index Route
 port.get("/drinks", (req, res) => {
     //res.send(drinks)
     res.render("index.ejs", {drinks})
 })
 
 
-
+// Show Route
+port.get("/drinks/:id", (req, res) => {
+   
+    res.send(req.params.id)
+})
 
 
 // Server listener
