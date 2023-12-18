@@ -12,7 +12,7 @@ const methodOverride = require("method-override")
 // Set variable for module.exports
 const drinks = require("./models/drinks.js")
 
-// Create app object
+// Create port object
 const port = express()
 
 // GET Route
@@ -30,7 +30,9 @@ port.get("/drinks", (req, res) => {
 
 // Show Route
 port.get("/drinks/:id", (req, res) => {
-   
+    // const id = req.params.id 
+    // const drink = drinks[id]
+    // res.send(drink)
     res.send(req.params.id)
 })
 
