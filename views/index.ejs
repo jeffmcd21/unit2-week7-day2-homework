@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>gitPub</title>
 
 </head>
 <body>
@@ -14,7 +14,7 @@
     <!-- Loop for names and capital letters -->
     <% for (let i = 0; i < drinks.length; i++){ %>
         <% drinks[i].name = drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %>
-        <a href="/drinks/ <%= i %>"><li id="drinkNames"> <%= drinks[i].name %> </li></a>
+        <a href="/drinks/<%= i %>"><li id="drinkNames"><%= drinks[i].name %></li></a>
     <% } %>
 
 

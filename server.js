@@ -30,10 +30,11 @@ port.get("/drinks", (req, res) => {
 
 // Show Route
 port.get("/drinks/:id", (req, res) => {
-    // const id = req.params.id 
-    // const drink = drinks[id]
+    const id = req.params.id 
+    const drink = drinks[id]
     // res.send(drink)
-    res.send(req.params.id)
+    // res.send(req.params.id)
+    res.render("show.ejs", {drink, id})
 })
 
 
