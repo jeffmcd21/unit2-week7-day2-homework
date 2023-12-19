@@ -5,31 +5,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <title>gitPub</title>
 
 </head>
 <body>
     <h1>At foo bar</h1>
 
-    <div class="drinkDetails">
-        <h2><%= drink.name %></h2>
-        <img src="<%= drink.image %>.png">
-        <h3>$<%= drink.price %></h3>     
-    </div>
+    <img src="<%= drink.image %>.png">
 
-    <a href="/drinks">Return to Main Menu</a>
+    <!-- <div class="drinkDetails"> -->
+        <h2><%= drink.name %></h2>
+        <h3>$<%= drink.price %></h3>     
+    <!-- </div> -->
+
+    <a href="/drinks" class="drinks-button">Return to Main Menu</a>
 
 
     <style>
+
+        h1 {
+            background-image: linear-gradient(to right, #f647e4, #39d2c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            animation: neon 2s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes neon {
+        0% {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        }
+
+        h3 {
+            text-decoration: underline;
+            text-decoration-skip: spaces;
+        }
+
+        
         body {
+            font-family: 'Space Grotesk', sans-serif;
             background-color: rgb(92, 92, 92);
             color: black;
+            margin: auto;
             text-align: center;
         }
+
 
         #drinkNames {
             color: orange;
         }
+
+        a.drinks-button {
+            padding: 5px 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #b0b0b0;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        a.drinks-button:hover {
+            background-color: #ff8989;
+        }
+
+        img {
+            max-width: 425px;
+            max-height: 425px;
+            border: 5px solid #000;
+            border-radius: 2em;
+        }
+
     </style>
     
 </body>
